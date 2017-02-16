@@ -9,4 +9,5 @@ urlpatterns = [
 
     url(r'^admin/', include(admin.site.urls)),
     url(r'^disk/', 'disk.views.register'),
+    url(r'^disk1/', 'disk.views.download'),
 ]

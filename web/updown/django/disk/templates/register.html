@@ -11,6 +11,13 @@
 		{{uf.as_p}}
 		<input type="submit" value="ok"/>
 	</form>
+
+	<h1>download</h1>
+	<form enctype="multipart/form-data" action="/disk1/" method="post">
+	{% csrf_token %}
+	<input type="submit" value="download"/>
+	</form>
 </body>
+
 
 </html>

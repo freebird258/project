@@ -9,9 +9,11 @@
 2.django
 upload_to,models.FileField(upload_to = get_photo_path)//灵活定制
 
-
-
-
+下载
+------
+-----
+1.django yield (注意:zip tempfile.TemporaryFile)
+2.静态服务器处理:sendfile
 
 知识点
 ---------
