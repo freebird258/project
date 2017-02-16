@@ -1,0 +1,29 @@
+官方文档：http://python.usyiyi.cn/django_182/topics/http/file-uploads.html
+-----------------------------------------------
+
+上传
+------
+------
+1.方式一
+ open,f.chunks()
+2.django
+upload_to,models.FileField(upload_to = get_photo_path)//灵活定制
+
+
+
+
+
+知识点
+---------
+---------
+form
+{{ form.as_table }} will render them as table cells wrapped in <tr> tags
+{{ form.as_p }} will render them wrapped in <p> tags
+{{ form.as_ul }} will render them wrapped in <li> tags
+
+csrf
+1.要启用 django.middleware.csrf.CsrfViewMiddleware 这个中间件
+2.再次，在所有的 POST 表单元素时，需要加上一个 {% csrf_token %} tag
+3.在渲染模块时，使用 RequestContext。RequestContext 会处理 csrf_token 这个 tag,  从而自动为表单添加一个名为 csrfmiddlewaretoken 的 input
+e.g. return render_to_response('register.html',{'uf':uf}):"A {% csrf_token %} was used in a template, but the context "
+    return render(request,'register.html',{'uf':uf})
