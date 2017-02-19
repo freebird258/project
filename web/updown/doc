@@ -12,6 +12,7 @@ upload_to,models.FileField(upload_to = get_photo_path)//灵活定制
 下载
 ------
 -----
+http://www.cnblogs.com/linxiyue/p/4187484.html
 1.django yield (注意:zip tempfile.TemporaryFile)
 2.静态服务器处理:sendfile
 	nginx: root/alias
