@@ -46,3 +46,11 @@ def download(request):
 	response['Content-Type'] = 'application/octet-stream'
 	response['Content-Disposition'] = 'attachment;filename="{0}"'.format(the_file_name)
 	return response
+
+def download_nginx(request):
+	response = HttpResponse()
+	response['Content_Type']='application/octet-stream'
+	response["Content-Disposition"] = "attachment; filename=mmm.png"
+#	response['Content-Length'] = os.path.getsize(book.myBook.path)
+	response['X-Accel-Redirect'] = "/static/mmm.png"
+	return response
