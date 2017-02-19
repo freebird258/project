@@ -1,0 +1,13 @@
+import os
+import sys
+import MySQLdb
+import numpy as np
+import pandas as pd
+import tushare as ts
+today_all = ts.get_today_all()
+
+all_stock = totady_all.loc[:,['code','name']]
+
+
+mysql_cn= MySQLdb.connect(host='localhost',port=3306,user='root', passwd='123456', db='stock',charset="utf8")
+all_stock.to_sql("all_stock",mysql_cn, flavor='mysql',index=True,index_label="id",keys='id',if_exists='append')
