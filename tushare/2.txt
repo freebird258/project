@@ -1,0 +1,5 @@
+CREATE TABLE `all_stock` (
+  `id` int(11) DEFAULT 0,
+  `code` varchar(255) NOT NULL DEFAULT '',
+  `name` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
