@@ -1,0 +1,15 @@
+WSGI application接口应该实现为一个可调用对象，例如函数、方法、类、含__call__方法的实例。这个可调用对象可以接收2个参数：
+
+一个字典，该字典可以包含了客户端请求的信息以及其他信息，可以认为是请求上下文，一般叫做environment（编码中多简写为environ、env）；
+一个用于发送HTTP响应状态（HTTP status ）、响应头（HTTP headers）的回调函数。
+同时，可调用对象的返回值是响应正文（response body），响应正文是可迭代的、并包含了多个字符串。
+
+1.格式化字符串
+aa="""Age:%(age1)s"""
+bb =  aa % {'age1':"123"}
+2.wsgi post
+request_body = environ['wsgi.input'].read(request_body_size)
+3.wsgi get
+environ['QUERY_STRING']
+
+
