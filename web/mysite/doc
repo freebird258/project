@@ -1,0 +1,4 @@
+##数据库迁移
+修改你的模型（在models.py文件中）。
+运行python manage.py makemigrations ，为这些修改创建迁移文件
+运行python manage.py migrate ，将这些改变更新到数据库中。
