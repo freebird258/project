@@ -27,7 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
+AUTH_USER_MODE = "abstract" 
 # Application definition
 
 INSTALLED_APPS = (
@@ -40,6 +40,7 @@ INSTALLED_APPS = (
 	'polls',
 	'login',
 	'login_profile',
+	'abstract',
 )
 
 MIDDLEWARE_CLASSES = (
