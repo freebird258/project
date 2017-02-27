@@ -40,7 +40,7 @@ INSTALLED_APPS = (
 	'polls',
 	'login',
 	'login_profile',
-	'abstract',
+    'jquery_ajax',
 )
 
 MIDDLEWARE_CLASSES = (
