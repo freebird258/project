@@ -27,7 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
+AUTH_USER_MODEL = "focus.NewUser"
 # Application definition
 
 INSTALLED_APPS = (
@@ -37,6 +37,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'focus',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -95,7 +96,7 @@ USE_L10N = True
 
 USE_TZ = True
 
-
+LOGIN_URL = "/focus/login/?next='article_id'"
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 

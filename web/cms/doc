@@ -1,0 +1,19 @@
+###
+class meta()
+通过django的meta类来修改自动后台显示的模块名称
+
+##
+formfield_overrides
+可以覆盖Model表单界面的一些字段的选项，为一些特定类型的字段添加自己定制的部件
+class MyModelAdmin(admin.ModelAdmin):
+    formfield_overrides = {
+        models.TextField: {'widget': RichTextEditorWidget},
+    }
+
+##
+foreign
+如果你需要关联到一个还没有定义的模型，你可以使用模型的名字而不用模型对象本身
+
+##
+url
+url()函数看起来的格式象：url(r^/account/$', views.index, name=index)，它可以接收四个参数，分别是两个必选参数：regex、view和两个可选参数：kwargs、name，接下来详细介绍这四个参数。
