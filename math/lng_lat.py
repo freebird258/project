@@ -39,6 +39,6 @@ if __name__ == '__main__':
 			sys.exit()
 		else: 
 			pass
-	print getlonlat(*args)
-#	print getlonlat(106.54637,29.592127,3000)
+#print getlonlat(*args)
+	print getlonlat(106.580806,29.612838,600)
 

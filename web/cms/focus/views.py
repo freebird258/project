@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
 from django.shortcuts import render, redirect, get_object_or_404
 from .models import Article, Comment, Poll, NewUser
 from .forms import CommmentForm, LoginForm, RegisterForm, SetInfoForm, SearchForm
